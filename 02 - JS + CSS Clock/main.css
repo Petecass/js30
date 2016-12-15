@@ -52,6 +52,10 @@ body {
   background: #888;
 }
 
+.second-hand {
+  background: red;
+}
+
 .smooth {
   transition: none !important;
 }
