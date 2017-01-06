@@ -1,0 +1,21 @@
+{
+  "name": "30-day-javascript",
+  "version": "1.0.0",
+  "description": "A follow along with Wes Bos",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Petecass/js30.git"
+  },
+  "author": "Pete Cass",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Petecass/js30/issues"
+  },
+  "homepage": "https://github.com/Petecass/js30#readme"
+}
