@@ -1,4 +1,3 @@
-
 const player = document.querySelector('.player');
 
 const video = player.querySelector('.viewer');
@@ -28,7 +27,7 @@ function skip() {
 let rangeMouseDown = false;
 
 function handleRangeUpdate() {
-  if (!rangeMouseDown) return
+  if (!rangeMouseDown) return;
 
   video[this.name] = this.value;
 }
@@ -62,11 +61,6 @@ ranges.forEach(range => range.addEventListener('mouseup', () => rangeMouseDown =
 
 let progressMouseDown = false;
 progress.addEventListener('click', scrub);
-progress.addEventListener('mousemove', (e) => progressMouseDown && scrub(e));
+progress.addEventListener('mousemove', e => progressMouseDown && scrub(e));
 progress.addEventListener('mousedown', () => progressMouseDown = true);
 progress.addEventListener('mouseup', () => progressMouseDown = false);
-
-
-
-
-
