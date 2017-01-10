@@ -3,7 +3,6 @@
 // ## Array Cardio Day 1
 
 // Some data we can work with
-
 const inventors = [
   { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
   { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -16,7 +15,7 @@ const inventors = [
   { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
   { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
   { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
-  { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+  { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 },
 ];
 
 const flavours = ['Chocolate Chip', 'Kulfi', 'Caramel Praline', 'Chocolate', 'Burnt Caramel', 'Pistachio', 'Rose', 'Sweet Coconut', 'Lemon Cookie', 'Toffeeness', 'Toasted Almond', 'Black Raspberry Crunch', 'Chocolate Brownies', 'Pistachio Almond', 'Strawberry', 'Lavender Honey', 'Lychee', 'Peach', 'Black Walnut', 'Birthday Cake', 'Mexican Chocolate', 'Mocha Almond Fudge', 'Raspberry'];
@@ -45,9 +44,7 @@ const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 
-const totalYears = inventors.reduce((total, inventor) => {
-  return total + (inventor.passed - inventor.year);
-}, 0);
+const totalYears = inventors.reduce((total, inventor) => total + (inventor.passed - inventor.year), 0);
 
 // console.log(totalYears);
 
@@ -59,7 +56,7 @@ const oldest = inventors.sort((a, b) => {
   return last > next ? 1 : -1;
 });
 
-console.table(oldest)
+console.table(oldest);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -71,27 +68,25 @@ console.table(oldest)
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 const alpha = people.sort((lastOne, nextOne) => {
-  const [aLast, aFirst] = lastOne.split(', ')
-  const [bLast, bFirst] = nextOne.split(', ')
+  const [aLast, aFirst] = lastOne.split(', ');
+  const [bLast, bFirst] = nextOne.split(', ');
   return aLast > bLast ? 1 : -1;
-
 });
 
 // console.log(alpha);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
-const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
 
-const transportation = data.reduce(function(obj, item) {
+const transportation = data.reduce((obj, item) => {
   if (!obj[item]) {
     obj[item] = 0;
   }
 
   obj[item] ++;
 
-  return obj
-
+  return obj;
 }, {});
 
 console.log(transportation);
